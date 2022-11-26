@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q858xIMbgLyjGYsbX2xlKcMN28D0Mn0b8sp1OtRru6jujibrU7BnwL9ChGuYLmTXdnpemfTJtexEEgw6+ouNQQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JoelSena\\www\\github\\teleatendimento_medico\\teleatendimento_medico\\teleatendimento_medico.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JoelSena\\.nuget\\packages\\microsoft.data.sqlite\\6.0.0\\microsoft.data.sqlite.6.0.0.nupkg.sha512",
+    "C:\\Users\\JoelSena\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.0\\microsoft.data.sqlite.core.6.0.0.nupkg.sha512",
+    "C:\\Users\\JoelSena\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\JoelSena\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
+    "C:\\Users\\JoelSena\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\JoelSena\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.6\\sqlitepclraw.provider.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\JoelSena\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

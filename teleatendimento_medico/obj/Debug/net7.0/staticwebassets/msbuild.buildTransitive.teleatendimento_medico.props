@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\teleatendimento_medico.props" />
+</Project>
