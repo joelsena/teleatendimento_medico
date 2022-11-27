@@ -1,1 +1,52 @@
-That is the form
+@model PessoaViewModel
+
+<form id="form-action" role="form" onsubmit="event.preventDefault(); handleOnSubmit(this);">
+    <h4>Informações Pessoais</h4>
+    <div asp-validation-summary="All"></div>
+    <label>
+        <p>Nome</p>
+        <input type="text" asp-for="pessoa.nome">
+        <span asp-validation-for="pessoa.nome"></span>
+    </label>
+    <label>
+        <p>CPF</p>
+        <input type="text" asp-for="pessoa.cpf">
+        <span asp-validation-for="pessoa.cpf"></span>
+    </label>
+    @* TODO: Endereço *@
+    <fieldset>
+        <h4>Endereço</h4>
+        <label>
+            <p>Logradouro</p>
+            <input type="text" asp-for="pessoa.endereco.logradouro">
+            <span asp-validation-for="pessoa.endereco.logradouro"></span>
+        </label>
+        <label>
+            <p>Número</p>
+            <input type="text" asp-for="pessoa.endereco.numero">
+            <span asp-validation-for="pessoa.endereco.numero"></span>
+        </label>
+        <label>
+            <p>CEP</p>
+            <input type="text" asp-for="pessoa.endereco.cep">
+            <span asp-validation-for="pessoa.endereco.cep"></span>
+        </label>
+        <label>
+            <p>Bairro</p>
+            <input type="text" asp-for="pessoa.endereco.bairro">
+            <span asp-validation-for="pessoa.endereco.bairro"></span>
+        </label>
+        <label>
+            <p>Cidade</p>
+            <input type="text" asp-for="pessoa.endereco.cidade">
+            <span asp-validation-for="pessoa.endereco.cidade"></span>
+        </label>
+        <label>
+            <p>Estado</p>
+            <input type="text" asp-for="pessoa.endereco.estado">
+            <span asp-validation-for="pessoa.endereco.estado"></span>
+        </label>
+    </fieldset>
+    @* TODO: Telefones *@
+    <input type="submit" id="form-button" value="Salvar">
+</form>

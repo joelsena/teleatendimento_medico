@@ -1,7 +1,45 @@
 ﻿@{
     ViewData["Title"] = "Início";
 }
+@model PessoaViewModel
 
 <div class="text-center">
-    Tabela aqui
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">CPF</th>
+                <th scope="col">Logradouro</th>
+                <th scope="col">Numero</th>
+                <th scope="col">CEP</th>
+                <th scope="col">Bairro</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var p in Model.PessoaList)
+            {
+                <tr>
+                    <td class="pessoas-column" scope="row">@p.id</td>
+                    <td class="pessoas-column" scope="row">@p.nome</td>
+                    <td class="pessoas-column" scope="row">@p.cpf</td>
+                    <td class="pessoas-column" scope="row">@p.endereco.logradouro</td>
+                    <td class="pessoas-column" scope="row">@p.endereco.numero</td>
+                    <td class="pessoas-column" scope="row">@p.endereco.cep</td>
+                    <td class="pessoas-column" scope="row">@p.endereco.bairro</td>
+                    <td class="pessoas-column" scope="row">@p.endereco.cidade</td>
+                    <td class="pessoas-column" scope="row">@p.endereco.estado</td>
+                    <td>
+                        <button type="button" onclick="deletePessoa(@p.id)">Deletar</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="updatePessoa(@p.id)">Atualizar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
