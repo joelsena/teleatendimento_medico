@@ -3,19 +3,21 @@
 }
 @model PessoaViewModel
 
-<div class="text-center">
-    <table>
+<div class="mt-4 table-responsive">
+    <table class="table table-striped align-middle table-bordered">
         <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nome</th>
-                <th scope="col">CPF</th>
-                <th scope="col">Logradouro</th>
-                <th scope="col">Numero</th>
-                <th scope="col">CEP</th>
-                <th scope="col">Bairro</th>
-                <th scope="col">Cidade</th>
-                <th scope="col">Estado</th>
+            <tr class="table-dark">
+                <th>#</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Logradouro</th>
+                <th>Numero</th>
+                <th>CEP</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
 
@@ -33,10 +35,11 @@
                     <td class="pessoas-column" scope="row">@p.endereco.cidade</td>
                     <td class="pessoas-column" scope="row">@p.endereco.estado</td>
                     <td>
-                        <button type="button" onclick="deletePessoa(@p.id)">Deletar</button>
+                        <button class="btn btn-danger fw-bold" type="button" onclick="deletePessoa(@p.id)">Deletar</button>
                     </td>
                     <td>
-                        <button type="button" onclick="updatePessoa(@p.id)">Atualizar</button>
+                        <button class="btn btn-primary fw-bold" type="button"
+                        onclick="updatePessoa(@p.id)">Atualizar</button>
                     </td>
                 </tr>
             }

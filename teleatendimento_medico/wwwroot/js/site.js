@@ -32,12 +32,15 @@ function handleOnSubmit(form) {
 }
 
 function deletePessoa(id) {
-  $.ajax({
-    url: "Home/Delete",
-    type: "POST",
-    data: { id },
-    success: reloadPage,
-  });
+  const res = confirm("Deseja realmente excluir essa pessoa?");
+  if (res) {
+    $.ajax({
+      url: "Home/Delete",
+      type: "POST",
+      data: { id },
+      success: reloadPage,
+    });
+  }
 }
 
 function handleUpdatePessoa(form, pessoaId, enderecoId) {
@@ -80,7 +83,9 @@ function updatePessoa(id) {
       $("#pessoa_endereco_cidade").val(response.endereco.cidade);
       $("#pessoa_endereco_estado").val(response.endereco.estado);
 
-      $("#form-button").val("Atualizar");
+      document.getElementById("form-button").innerHTML = "Atualizar";
+
+      // $("#form-button").attr("innerText", "Atualizar");
       $("#form-action").attr(
         "onsubmit",
         `event.preventDefault(); handleUpdatePessoa(this, pessoaId=${response.id},enderecoId=${response.endereco.id})`
